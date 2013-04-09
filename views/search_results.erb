@@ -1,0 +1,15 @@
+<h1>Here are your results for <%= @title %></h1>
+<div class="results_hash_values">
+  <table>
+      <th>Title</th>
+      <th>Year</th>
+   <% if @results != nil
+    @results.each do |r| %>
+      <tr>
+        <td><a href='/movie-page/<%= r['imdbID'] %>'><%= r['Title'] %></a></td>
+        <td><%= r['Year'] %></td>
+      <% end %>
+      </tr>
+  </table>
+    <% end %>
+</div>
